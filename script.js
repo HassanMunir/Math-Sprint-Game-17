@@ -73,7 +73,7 @@ function getSavedBestScores() {
 function updateBestScore() {
   bestScoreArray.forEach((bestScore, index) => {
     // Select the Correct Best Score to Update
-    if (questionAmount == score.questions) {
+    if (questionAmount == bestScore.questions) {
       // Return Best Score as number with one decimal
       const savedBestScore = Number(bestScoreArray[index].bestScore);
       // Update if the new final score is less or replacing zero
@@ -242,7 +242,7 @@ function equationsToDOM() {
 // Dynamically adding correct/incorrect equations
 function populateGamePage() {
   // Reset DOM, Set Blank Spaces Above
-  itemContainer.textContainer = '';
+  itemContainer.textContent = '';
   // Spacer
   const topSpacer = document.createElement('div');
   topSpacer.classList.add('height-240');
